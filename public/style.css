@@ -1,16 +1,16 @@
 :root {
-	--color-close: #f05454;
-	--color-open: #e8e8e8;
-	--color-temp-path: #3cc4fe;
-	--color-path: #3ccf4e;
+	--color-close: #ff6b6b; /* Brighter red for better visibility */
+	--color-open: #ffffff;  /* Pure white for better contrast */
+	--color-temp-path: #4facfe; /* Slightly darker for better visibility */
+	--color-path: #4ecf4e; /* Slightly darker green for better visibility */
 	--color-face: #ffff00;
 
-	--color-bg: #100f0f;
-	--color-text: #f1f1f1;
-	--color-subtext: #f3f9fb;
+	--color-bg: #1a1a1a; /* Slightly lighter for better readability */
+	--color-text: #e0e0e0; /* Slightly darker for better readability */
+	--color-subtext: #c0c0c0; /* Slightly darker for better readability */
 
-	--color-btn: #4e4e4e;
-	--color-btn-border: #808080;
+	--color-btn: #555555; /* Slightly lighter for better contrast */
+	--color-btn-border: #999999; /* Slightly lighter for better contrast */
 }
 
 * {
@@ -32,35 +32,39 @@ header {
 
 header h1 {
 	margin-bottom: 10px;
+	color: var(--color-face);
 }
 
 /* INPUT FORM */
 
 .input-form {
 	text-align: center;
-	margin: 10px 0 10px 0;
+	margin: 10px 0;
 	padding: 10px;
+	background-color: #2a2a2a; /* Adding a background for better distinction */
+	border-radius: 10px; /* Adding rounded corners */
 }
 
 .form-item {
 	margin-top: 10px;
 	margin-bottom: 10px;
 
-	/* vertically align input field in div */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .form-item input {
-	width: 60px;
+	width: 80px; /* Increased width for better usability */
 	margin-left: 15px;
 	margin-right: 10px;
 	color: #000;
+	padding: 5px; /* Added padding for better usability */
+	border-radius: 5px; /* Rounded corners for inputs */
 }
 
 .form-item input[type='range'] {
-	width: 120px;
+	width: 140px; /* Increased width for better usability */
 }
 
 .form-item span {
@@ -69,41 +73,49 @@ header h1 {
 
 .btn {
 	margin: 10px;
-	padding: 5px;
-	border-radius: 5px;
+	padding: 10px; /* Increased padding for better usability */
+	border-radius: 10px; /* More rounded corners */
 	background-color: var(--color-btn);
 	border: 1px solid var(--color-btn-border);
+	transition: background-color 0.3s, border-color 0.3s; /* Smooth transition effect */
 }
 
 .btn:hover {
 	cursor: pointer;
+	background-color: var(--color-text); /* Lighter background on hover */
+	color: var(--color-bg); /* Inverted text color on hover */
 	border: 1px solid var(--color-subtext);
 }
 
 .btn:disabled {
 	border: 1px solid var(--color-btn-border);
+	background-color: #444444; /* Darker background when disabled */
+	color: #888888; /* Lighter text when disabled */
 }
 
 /* MAZE */
 
 .maze {
 	text-align: center;
+	margin: 20px 0; /* Added margin for spacing */
 }
 
 .row {
-	display: block;
+	display: flex; /* Changed to flex for better alignment */
+	justify-content: center; /* Center align rows */
 }
 
 .cell {
-	height: 35px;
-	width: 35px;
+	height: 40px; /* Increased height for better visibility */
+	width: 40px; /* Increased width for better visibility */
 	padding: 5px;
-	margin: 2px 5px 2px 5px;
+	margin: 2px 5px;
 	display: inline-block;
 	background-color: var(--color-open);
 	border: 1px solid var(--color-open);
-	border-radius: 3px;
+	border-radius: 5px; /* Increased border radius */
 	cursor: pointer;
+	transition: border-color 0.3s; /* Smooth transition effect */
 }
 
 .cell:hover,
@@ -133,9 +145,12 @@ details {
 	padding-left: 50px;
 	padding-right: 50px;
 	cursor: pointer;
+	background-color: #2a2a2a; /* Adding background color */
+	border-radius: 10px; /* Adding rounded corners */
+	padding: 20px; /* Increased padding for better usability */
 }
 
-.legend {
+legend {
 	margin-top: 20px;
 	margin-left: 20px;
 }
@@ -151,12 +166,12 @@ details {
 .legend-cell div {
 	width: 18px;
 	height: 18px;
-	border-radius: 1px;
+	border-radius: 3px; /* Increased border radius */
 	float: left;
 }
 
 .legend-cell span {
-	font-size: 12px;
+	font-size: 14px; /* Slightly increased font size */
 	margin-left: 10px;
 	width: 90%;
 }
@@ -166,8 +181,11 @@ details {
 	margin-bottom: 50px;
 	padding-left: 50px;
 	padding-right: 50px;
+	background-color: #2a2a2a; /* Adding background color */
+	border-radius: 10px; /* Adding rounded corners */
+	padding: 20px; /* Increased padding for better usability */
 }
 
 .info p {
-	font-size: 13px;
+	font-size: 14px; /* Slightly increased font size */
 }
